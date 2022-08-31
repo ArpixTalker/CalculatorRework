@@ -124,3 +124,13 @@ D:\Repository\Astratex\New folder\CalculatorRework\Calculator\obj\Debug\net6.0\r
 D:\Repository\Astratex\New folder\CalculatorRework\Calculator\obj\Debug\net6.0\Calculator.pdb
 D:\Repository\Astratex\New folder\CalculatorRework\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
 D:\Repository\Astratex\New folder\CalculatorRework\Calculator\obj\Debug\net6.0\ref\Calculator.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\Repository\Astratex\New folder\CalculatorRework\Calculator\bin\Debug\net6.0\Serilog.Sinks.File.dll

@@ -24,20 +24,24 @@ namespace Calculator.Controllers
         [Route("api/v1/math/compute")]
         public string ComputeExpression(string expression, bool whole) 
         {
-            try
+            if (!string.IsNullOrEmpty(expression))
             {
-                var output =  this._calc.ComputeExpression(expression, whole);
-
-                if (output.Success == true)
+                try
                 {
-                    this.SaveMathExpression(expression + "=" + output.Value);
-                    return output.Value.ToString();
+                    var output = this._calc.ComputeExpression(expression, whole);
+
+                    if (output.Success == true)
+                    {
+                        this.SaveMathExpression(expression + "=" + output.Value);
+                        return output.Value.ToString();
+                    }
+                }
+                catch (SyntaxErrorException)
+                {
+                    SendError(LogLevel.Error, $"Received Expression has incorrect format: {expression}");
                 }
             }
-            catch (SyntaxErrorException) 
-            {
-                SendError(LogLevel.Error, $"Received Expression has incorrect format: {expression}");
-            }
+            SendError(LogLevel.Warning, "Expression was nul or empty");
             return "error";
         }
 

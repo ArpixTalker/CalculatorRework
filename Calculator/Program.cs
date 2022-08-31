@@ -2,6 +2,7 @@ using DAL;
 using Microsoft.EntityFrameworkCore;
 using CalculatorLogic;
 using CalculatorLogic.Interfaces;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,15 @@ builder.Services.AddDbContext<CalculatorDBContext>(options => {
     options.UseSqlServer(connectionString);
 
 });
+
 builder.Services.AddTransient<ICalculatorService, CalculatorService>();
+
+//Add serilog as only logging provider
+var logger = new LoggerConfiguration().ReadFrom
+    .Configuration(builder.Configuration)
+    .Enrich.FromLogContext().CreateLogger();
+
+builder.Logging.AddSerilog(logger);
 
 var app = builder.Build();
 

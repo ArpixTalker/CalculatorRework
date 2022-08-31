@@ -43,7 +43,7 @@
 
     })
 
-    //Computes the expression (used math.js from https://mathjs.org/)
+    //Computes the expression
     function compute_expression(expression) {
 
         const whole_numbers = $('#whole_numbers_checkbox').is(":checked");
@@ -91,27 +91,6 @@
         else {
             return false;
         }
-    }
-
-    //Sends whole input to backend to be saved in DB
-    function sendExpression(expression)
-    {
-        $.ajax({
-
-            method: "POST",
-            async: false,
-            url: "api/v1/math/saveExpression",
-            data: {
-                expression: expression
-            },
-            success: function (output) {
-
-                console.log(output);
-            }, error: function (error) {
-
-                console.log(error);
-            }
-        });
     }
 
     //AJAX call to get latest ten expressions
