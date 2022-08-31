@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RJ0m/ZQFghzt0EYwNtGNQIO6aPblaZB5aiObO3bpi2jJFB6eyVSq7cEjUYxR6FJMeAbBEyC8yd5xwB7MgI/BCQ==",
+  "dgSpecHash": "EGglQH+vZcz4+E/FTIkKxioLTCFuok8rFSnqDLqFM1wiPexgJ1JCfqqQhcvWuULYaQZ/Bg3vePLyKESq1FW9Nw==",
   "success": true,
-  "projectFilePath": "D:\\RepoNew\\Calculator\\UnitTests\\UnitTests.csproj",
+  "projectFilePath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\UnitTests\\UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\snipe\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\snipe\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

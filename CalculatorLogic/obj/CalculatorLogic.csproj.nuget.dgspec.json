@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj": {}
+    "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj": {}
   },
   "projects": {
-    "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj": {
+    "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj",
+        "projectUniqueName": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj",
         "projectName": "CalculatorLogic",
-        "projectPath": "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj",
+        "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj",
         "packagesPath": "C:\\Users\\snipe\\.nuget\\packages\\",
-        "outputPath": "D:\\RepoNew\\Calculator\\CalculatorLogic\\obj\\",
+        "outputPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

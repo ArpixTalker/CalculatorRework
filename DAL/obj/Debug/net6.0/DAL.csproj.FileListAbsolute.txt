@@ -12,3 +12,17 @@ D:\RepoNew\Calculator\DAL\obj\Debug\net6.0\refint\DAL.dll
 D:\RepoNew\Calculator\DAL\obj\Debug\net6.0\DAL.pdb
 D:\RepoNew\Calculator\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 D:\RepoNew\Calculator\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\bin\Debug\net6.0\DAL.dll
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\bin\Debug\net6.0\DAL.pdb
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.dll
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.pdb
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\Repository\Astratex\New folder\CalculatorRework\DAL\obj\Debug\net6.0\ref\DAL.dll

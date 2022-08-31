@@ -1871,11 +1871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj",
+      "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\snipe\\.nuget\\packages\\",
-      "outputPath": "D:\\RepoNew\\Calculator\\DAL\\obj\\",
+      "outputPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RepoNew\\Calculator\\Calculator\\Calculator.csproj": {}
+    "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj": {
+    "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj",
+        "projectUniqueName": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj",
         "projectName": "CalculatorLogic",
-        "projectPath": "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj",
+        "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj",
         "packagesPath": "C:\\Users\\snipe\\.nuget\\packages\\",
-        "outputPath": "D:\\RepoNew\\Calculator\\CalculatorLogic\\obj\\",
+        "outputPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\RepoNew\\Calculator\\Calculator\\Calculator.csproj": {
+    "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepoNew\\Calculator\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "D:\\RepoNew\\Calculator\\Calculator\\Calculator.csproj",
+        "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\Calculator\\Calculator.csproj",
         "packagesPath": "C:\\Users\\snipe\\.nuget\\packages\\",
-        "outputPath": "D:\\RepoNew\\Calculator\\Calculator\\obj\\",
+        "outputPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,11 +90,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj": {
-                "projectPath": "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj"
+              "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj": {
+                "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\CalculatorLogic\\CalculatorLogic.csproj"
               },
-              "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj"
+              "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj"
               }
             }
           }
@@ -136,14 +136,14 @@
         }
       }
     },
-    "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj": {
+    "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj",
+        "projectPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\snipe\\.nuget\\packages\\",
-        "outputPath": "D:\\RepoNew\\Calculator\\DAL\\obj\\",
+        "outputPath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

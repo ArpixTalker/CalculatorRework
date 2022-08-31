@@ -7,6 +7,7 @@
     let _display = $("#calc_display");
     let _displayingResult = false;
     let _expression = "";
+    let _whole = false;
     refreshHistory();
 
     $('.calc_element').click(function () {
@@ -45,7 +46,7 @@
     //Computes the expression (used math.js from https://mathjs.org/)
     function compute_expression(expression) {
 
-        let outcome = 0;
+        const whole_numbers = $('#whole_numbers_checkbox').is(":checked");
 
         if (validateExpression(expression)) {
 
@@ -56,7 +57,9 @@
                 url: "api/v1/math/compute",
                 data: {
 
-                    expression: expression
+                    expression: expression,
+                    whole: whole_numbers
+
                 }, success: function (output) {
 
                     if (output === "error") {

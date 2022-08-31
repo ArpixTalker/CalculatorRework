@@ -10,3 +10,15 @@ D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.dll
 D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\refint\CalculatorLogic.dll
 D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.pdb
 D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\ref\CalculatorLogic.dll
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\bin\Debug\net6.0\CalculatorLogic.deps.json
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\bin\Debug\net6.0\CalculatorLogic.dll
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\bin\Debug\net6.0\CalculatorLogic.pdb
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.csproj.AssemblyReference.cache
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.AssemblyInfoInputs.cache
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.AssemblyInfo.cs
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.csproj.CoreCompileInputs.cache
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.dll
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\refint\CalculatorLogic.dll
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.pdb
+D:\Repository\Astratex\New folder\CalculatorRework\CalculatorLogic\obj\Debug\net6.0\ref\CalculatorLogic.dll

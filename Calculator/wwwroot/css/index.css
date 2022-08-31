@@ -15,10 +15,14 @@
     background: cadetblue;
 }
 
+.special_button {
+
+    background: pink;
+}
+
 #calc_display {
     background: #c4ff99;
     text-align: right;
-   
 }
 
 #keys_div {

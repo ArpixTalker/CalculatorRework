@@ -13,9 +13,8 @@ namespace CalculatorLogic
             this._dt = new DataTable();
         }
 
-        public ComputeResult ComputeExpression(string expression) 
+        public ComputeResult ComputeExpression(string expression, bool whole) 
         {
-            ComputeResult result = new ComputeResult();
             try
             {
                 var output = this._dt.Compute(expression, "").ToString();
@@ -27,13 +26,13 @@ namespace CalculatorLogic
                         return new ComputeResult()
                         {
                             Success = true,
-                            Value = computed
-                            
+                            Value = (whole ? Math.Round(computed, 0) : computed)
+
                         };
                     }
-                    else 
+                    else
                     {
-                        SendError(new ArgumentException($"Could not convert result to double {computed}"));
+                        SendError(new ArgumentException($"Could not convert result to double: {computed}"));
                     }
                 }
             }

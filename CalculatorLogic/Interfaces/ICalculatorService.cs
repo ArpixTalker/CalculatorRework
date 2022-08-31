@@ -9,6 +9,6 @@ namespace CalculatorLogic.Interfaces
 {
     public interface ICalculatorService
     {
-        ComputeResult ComputeExpression(string expression);
+        ComputeResult ComputeExpression(string expression, bool whole);
     }
 }

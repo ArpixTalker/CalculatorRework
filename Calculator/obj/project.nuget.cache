@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7O7JQ751JUI4hiV3WoKVcwX6a8nzgjArE0fhGrAZNWZRYdqt3PCPq/SfCIga8AuNp3Zel87LwprVP6k37mypHw==",
+  "dgSpecHash": "DFgAlAqXgtYPVZM8eMuTPAzxyfu7//w37KJi0PSrVgxDeanImCMsLlfcR3irCqb0dlG7hk2QsMngP8pYD0F59g==",
   "success": true,
-  "projectFilePath": "D:\\RepoNew\\Calculator\\Calculator\\Calculator.csproj",
+  "projectFilePath": "D:\\Repository\\Astratex\\New folder\\CalculatorRework\\Calculator\\Calculator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\snipe\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\snipe\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -22,11 +22,11 @@ namespace Calculator.Controllers
 
         [HttpPost]
         [Route("api/v1/math/compute")]
-        public string ComputeExpression([FromForm]string expression) 
+        public string ComputeExpression(string expression, bool whole) 
         {
             try
             {
-                var output =  this._calc.ComputeExpression(expression);
+                var output =  this._calc.ComputeExpression(expression, whole);
 
                 if (output.Success == true)
                 {
@@ -36,7 +36,7 @@ namespace Calculator.Controllers
             }
             catch (SyntaxErrorException) 
             {
-                SendError(LogLevel.Error, $"Received Expression Has incorrect format: {expression}");
+                SendError(LogLevel.Error, $"Received Expression has incorrect format: {expression}");
             }
             return "error";
         }
