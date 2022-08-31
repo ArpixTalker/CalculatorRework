@@ -36,7 +36,7 @@ namespace Calculator.Controllers
             }
             catch (SyntaxErrorException) 
             {
-                
+                SendError(LogLevel.Error, $"Received Expression Has incorrect format: {expression}");
             }
             return "error";
         }
@@ -56,6 +56,10 @@ namespace Calculator.Controllers
                     models.Add(new ExpressionViewModel() { Expression = entity.Expression });
                 });
             }
+            else 
+            {
+                SendError(LogLevel.Error, "Failed to select expressions from database");
+            }
             return new JsonResult(models);
         }
 
@@ -72,6 +76,15 @@ namespace Calculator.Controllers
 
                 _database.SaveChanges();
             }
+            else 
+            {
+                SendError(LogLevel.Error, "Received Expression was null");
+            }
+        }
+
+        private void SendError(LogLevel level, string message) 
+        {
+            
         }
     }
 }

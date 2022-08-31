@@ -13,9 +13,9 @@ namespace CalculatorLogic
             this._dt = new DataTable();
         }
 
-        public ComputeReturn ComputeExpression(string expression) 
+        public ComputeResult ComputeExpression(string expression) 
         {
-            ComputeReturn result = new ComputeReturn();
+            ComputeResult result = new ComputeResult();
             try
             {
                 var output = this._dt.Compute(expression, "").ToString();
@@ -24,7 +24,7 @@ namespace CalculatorLogic
                 {
                     if (double.TryParse(output, out double computed))
                     {
-                        return new ComputeReturn()
+                        return new ComputeResult()
                         {
                             Success = true,
                             Value = computed
@@ -42,7 +42,7 @@ namespace CalculatorLogic
                 SendError(e);
             }
 
-            return new ComputeReturn()
+            return new ComputeResult()
             {
                 Success = false,
                 Value = 0
