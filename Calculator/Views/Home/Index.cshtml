@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<link rel="stylesheet" href="~/css/index.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.js"></script>
+
+<script type="text/javascript" src="~/js/index.js"></script>
+
+<div class="row">
+
+    <div id="calc_div" class="col-md-6 offset-3 border p-5">
+
+    
+        <div class="row" id="display_div" style="margin-bottom: 5px;">
+
+            <h3 class="m-0">Astratex Calculator</h3>
+            <input id="calc_display" disabled="disabled" type="text"/>
+
+        </div>
+
+        <div class="row border p-5" id="keys_div">
+           
+            <div class="row">
+
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="1"> 1 </button>
+                </div>                                      
+                <div class="col-md-3">                      
+                    <button class="calc_element key_button" operation="2"> 2 </button>
+                </div>                                      
+                <div class="col-md-3">                      
+                    <button class="calc_element key_button" operation="3"> 3 </button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="calc_element operation_button" operation="+"> + </button>
+                </div>
+
+             </div>
+
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="4"> 4 </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="5"> 5 </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="6"> 6 </button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="calc_element operation_button" operation="-"> - </button>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="7"> 7 </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="8"> 8 </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="9"> 9 </button>
+                </div>
+                         
+                <div class="col-md-3">
+                    <button class="calc_element operation_button" operation="*"> * </button>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="0"> 0 </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="."> . </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="calc_element key_button" operation="C"> C </button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="calc_element operation_button" operation="/"> / </button>
+                </div>
+
+            </div>
+            
+            <div class="row">
+
+                <div class="col-md-12">
+                    <button class="calc_element" id="key_compute" operation="="> = </button>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+        </div>
+
+    <div class="col m-5" id="history_div ">
+        <h3>History</h3>
+
+        <div id="history_content" class="border-1">
+
+
+        </div>
+
+    </div>
+
+</div>
+

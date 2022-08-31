@@ -1,0 +1,33 @@
+﻿.calc_element {
+
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.key_button {
+
+    background: lightgrey;
+}
+
+.operation_button {
+
+    background: cadetblue;
+}
+
+#calc_display {
+    background: #c4ff99;
+    text-align: right;
+   
+}
+
+#keys_div {
+
+    background: grey;
+    border-radius: 10px;
+}
+
+#calc_div {
+    background: lightgrey;
+    border-radius: 25px;
+}
