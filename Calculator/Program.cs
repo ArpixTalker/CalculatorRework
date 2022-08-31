@@ -1,5 +1,7 @@
 using DAL;
 using Microsoft.EntityFrameworkCore;
+using CalculatorLogic;
+using CalculatorLogic.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,8 @@ builder.Services.AddDbContext<CalculatorDBContext>(options => {
     options.UseSqlServer(connectionString);
 
 });
+builder.Services.AddTransient<ICalculatorService, CalculatorService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,0 +1,12 @@
+D:\RepoNew\Calculator\CalculatorLogic\bin\Debug\net6.0\CalculatorLogic.deps.json
+D:\RepoNew\Calculator\CalculatorLogic\bin\Debug\net6.0\CalculatorLogic.dll
+D:\RepoNew\Calculator\CalculatorLogic\bin\Debug\net6.0\CalculatorLogic.pdb
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.csproj.AssemblyReference.cache
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.AssemblyInfoInputs.cache
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.AssemblyInfo.cs
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.csproj.CoreCompileInputs.cache
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.dll
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\refint\CalculatorLogic.dll
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\CalculatorLogic.pdb
+D:\RepoNew\Calculator\CalculatorLogic\obj\Debug\net6.0\ref\CalculatorLogic.dll

@@ -598,6 +598,16 @@
           }
         }
       },
+      "CalculatorLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CalculatorLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalculatorLogic.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1777,6 +1787,11 @@
         "version.txt"
       ]
     },
+    "CalculatorLogic/1.0.0": {
+      "type": "project",
+      "path": "../CalculatorLogic/CalculatorLogic.csproj",
+      "msbuildProject": "../CalculatorLogic/CalculatorLogic.csproj"
+    },
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DAL/DAL.csproj",
@@ -1785,6 +1800,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CalculatorLogic >= 1.0.0",
       "DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8"
     ]
@@ -1821,6 +1837,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj": {
+              "projectPath": "D:\\RepoNew\\Calculator\\CalculatorLogic\\CalculatorLogic.csproj"
+            },
             "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj": {
               "projectPath": "D:\\RepoNew\\Calculator\\DAL\\DAL.csproj"
             }

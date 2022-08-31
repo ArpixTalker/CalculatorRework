@@ -49,19 +49,29 @@
 
         if (validateExpression(expression)) {
 
-            try {
-                _displayingResult = true;
-                outcome = math.evaluate(expression)
-                _display.val(outcome);
-                sendExpression(_expression + "=" + outcome);
-                _expression = outcome;
-                refreshHistory();
-            }
-            catch (error)
-            {
-                showError();
-            }
-            
+            $.ajax({
+
+                method: "POST",
+                async: false,
+                url: "api/v1/math/compute",
+                data: {
+
+                    expression: expression
+                }, success: function (output) {
+
+                    if (output === "error") {
+                        showError();
+                    }
+                    else
+                    {
+                        _display.val(output);
+                        _displayingResult = true;
+                        _expression = output;
+                        refreshHistory();
+                    }
+                    
+                }
+            });
         }
         else
         {
