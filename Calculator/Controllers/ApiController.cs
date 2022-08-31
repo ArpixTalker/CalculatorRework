@@ -12,12 +12,13 @@ namespace Calculator.Controllers
 
         private readonly CalculatorDBContext _database;
         private readonly ICalculatorService _calc;
+        private readonly ILogger<ApiController> _logger;
 
-
-        public ApiController(CalculatorDBContext database, ICalculatorService calc)
+        public ApiController(CalculatorDBContext database, ICalculatorService calc, ILogger<ApiController> logger)
         {
             this._database = database;
             this._calc = calc;
+            this._logger = logger;
         }
 
         [HttpPost]
