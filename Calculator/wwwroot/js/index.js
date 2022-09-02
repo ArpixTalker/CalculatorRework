@@ -2,12 +2,10 @@
 
     const _operation_equal = "=";
     const _operation_clear = "C";
-    const _expressionRegex = /[0-9]+\.?([0-9]+)?[+\-*\/][0-9]+\.?([0-9]+)?/;
     const _operatorArray = ["+","-","/","*"]
     let _display = $("#calc_display");
     let _displayingResult = false;
     let _expression = "";
-    let _whole = false;
     refreshHistory();
 
     $('.calc_element').click(function () {
@@ -26,7 +24,7 @@
         //Check if expression should be evaluated
         if (operation === _operation_equal) {
 
-            compute_expression(_expression)
+            getResult(_expression)
             return;
         }
 
@@ -43,54 +41,36 @@
 
     })
 
-    //Computes the expression
-    function compute_expression(expression) {
+    //Calls an AJAX to obtain either result of the expression or error message
+    function getResult(expression) {
 
         const whole_numbers = $('#whole_numbers_checkbox').is(":checked");
 
-        if (validateExpression(expression)) {
+        $.ajax({
 
-            $.ajax({
+            method: "POST",
+            async: false,
+            url: "api/v1/math/compute",
+            data: {
 
-                method: "POST",
-                async: false,
-                url: "api/v1/math/compute",
-                data: {
+                expression: expression,
+                whole: whole_numbers
 
-                    expression: expression,
-                    whole: whole_numbers
+            }, success: function (output) {
 
-                }, success: function (output) {
-
-                    if (output === "error") {
-                        showError();
-                    }
-                    else
-                    {
-                        _display.val(output);
-                        _displayingResult = true;
-                        _expression = output;
-                        refreshHistory();
-                    }
-                    
+                if (output === "error") {
+                    showError();
                 }
-            });
-        }
-        else
-        {
-            showError();
-        }
-    }
-
-    //Validates input agains regex
-    function validateExpression(expression) {
-
-        if (_expressionRegex.test(expression)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+                else
+                {
+                    _display.val(output);
+                    _displayingResult = true;
+                    _expression = output;
+                    refreshHistory();
+                }
+                    
+            }
+        });
     }
 
     //AJAX call to get latest ten expressions

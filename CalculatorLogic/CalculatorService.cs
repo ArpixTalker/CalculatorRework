@@ -6,7 +6,7 @@ namespace CalculatorLogic
 {
     public class CalculatorService : ICalculatorService
     {
-        DataTable _dt;
+        private DataTable _dt;
 
         public CalculatorService() 
         {
@@ -35,8 +35,12 @@ namespace CalculatorLogic
                         SendError(new ArgumentException($"Could not convert result to double: {computed}"));
                     }
                 }
+                else
+                {
+                    SendError(new NullReferenceException("Output of compute was null"))
+                }
             }
-            catch (Exception e) 
+            catch (SyntaxErrorException e) 
             {
                 SendError(e);
             }

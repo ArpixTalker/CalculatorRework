@@ -27,22 +27,23 @@ namespace Calculator.Controllers
         {
             if (!string.IsNullOrEmpty(expression))
             {
-                try
-                {
-                    var output = this._calc.ComputeExpression(expression, whole);
+                var output = this._calc.ComputeExpression(expression, whole);
 
-                    if (output.Success == true)
-                    {
-                        this.SaveMathExpression(expression + "=" + output.Value);
-                        return output.Value.ToString();
-                    }
-                }
-                catch (SyntaxErrorException)
+                if (output.Success == true)
                 {
-                    SendError(LogLevel.Error, $"Received Expression has incorrect format: {expression}");
+                    this.SaveMathExpression(expression + "=" + output.Value);
+                    return output.Value.ToString();
                 }
+                else 
+                {
+                    SendError("Could not get result");
+                }    
             }
-            SendError(LogLevel.Warning, "Expression was nul or empty");
+            else 
+            {
+                SendError("Expression was nul or empty");   
+            }
+            
             return "error";
         }
 
@@ -63,7 +64,7 @@ namespace Calculator.Controllers
             }
             else 
             {
-                SendError(LogLevel.Error, "Failed to select expressions from database");
+                SendError("Failed to select expressions from database");
             }
             return new JsonResult(models);
         }
@@ -83,11 +84,11 @@ namespace Calculator.Controllers
             }
             else 
             {
-                SendError(LogLevel.Error, "Received Expression was null");
+                SendError("Received Expression was null");
             }
         }
 
-        private void SendError(LogLevel level, string message) 
+        private void SendError(string message) 
         {
             
         }
