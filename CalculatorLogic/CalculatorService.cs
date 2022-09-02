@@ -13,6 +13,13 @@ namespace CalculatorLogic
             this._dt = new DataTable();
         }
 
+
+        /// <summary>
+        /// Returns Compute result with success bool and outcome value
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <param name="whole"></param>
+        /// <returns></returns>
         public ComputeResult ComputeExpression(string expression, bool whole) 
         {
             try
@@ -37,7 +44,7 @@ namespace CalculatorLogic
                 }
                 else
                 {
-                    SendError(new NullReferenceException("Output of compute was null"))
+                    SendError(new NullReferenceException("Output of compute was null"));
                 }
             }
             catch (SyntaxErrorException e) 
@@ -52,6 +59,10 @@ namespace CalculatorLogic
             };
         }
 
+        /// <summary>
+        /// Send Error method for any exception that may occur during computing
+        /// </summary>
+        /// <param name="e"></param>
         private void SendError(Exception e) 
         {
             

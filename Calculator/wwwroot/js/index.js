@@ -13,7 +13,8 @@
         let operation = $(this).attr("operation");
 
         //Check if user can continue with result
-        if (!_operatorArray.includes(operation.trim()) && _displayingResult) {
+        if (!_operatorArray.includes(operation.trim()) && _displayingResult && operation.trim() != "=") {
+
             _expression = "";
             _displayingResult = false;
         }

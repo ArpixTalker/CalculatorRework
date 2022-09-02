@@ -21,6 +21,12 @@ namespace Calculator.Controllers
             this._logger = logger;
         }
 
+        /// <summary>
+        /// Returns value of the expression o error string base on result of Calculator service
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <param name="whole"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("api/v1/math/compute")]
         public string ComputeExpression(string expression, bool whole) 
@@ -47,6 +53,10 @@ namespace Calculator.Controllers
             return "error";
         }
 
+        /// <summary>
+        /// Returns last 10 expression saved in database
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("api/v1/math/getLatestExpressions")]
         public JsonResult GetExpressions()
@@ -69,6 +79,10 @@ namespace Calculator.Controllers
             return new JsonResult(models);
         }
 
+        /// <summary>
+        /// Saves math expression to database (if valid and computed)
+        /// </summary>
+        /// <param name="expression"></param>
         private void SaveMathExpression(string expression)
         {
             if (!string.IsNullOrEmpty(expression))
@@ -88,6 +102,10 @@ namespace Calculator.Controllers
             }
         }
 
+        /// <summary>
+        /// Send error method
+        /// </summary>
+        /// <param name="message"></param>
         private void SendError(string message) 
         {
             
