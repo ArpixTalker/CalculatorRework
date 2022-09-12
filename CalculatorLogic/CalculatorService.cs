@@ -39,12 +39,12 @@ namespace CalculatorLogic
                     }
                     else
                     {
-                        SendError(new ArgumentException($"Could not convert result to double: {computed}"));
+                        SendError($"Could not convert result to double: {computed}");
                     }
                 }
                 else
                 {
-                    SendError(new NullReferenceException("Output of compute was null"));
+                    SendError("Output of compute was null");
                 }
             }
             catch (SyntaxErrorException e) 
@@ -57,6 +57,12 @@ namespace CalculatorLogic
                 Success = false,
                 Value = 0
             };
+        }
+
+
+        private void SendError(string error)
+        {
+
         }
 
         /// <summary>
