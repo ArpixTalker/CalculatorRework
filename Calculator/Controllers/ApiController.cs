@@ -4,6 +4,7 @@ using DAL;
 using DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using System.Reflection;
 
 namespace Calculator.Controllers
 {
@@ -31,6 +32,11 @@ namespace Calculator.Controllers
         [Route("api/v1/math/compute")]
         public string ComputeExpression(string expression, bool whole) 
         {
+            string method = MethodBase.GetCurrentMethod().ToString();
+            _logger.LogDebug($"Entered action: {method}");
+            _logger.LogDebug($"Param expression: {expression}");
+            _logger.LogDebug($"Param whole: {whole}");
+
             if (!string.IsNullOrEmpty(expression))
             {
                 var output = this._calc.ComputeExpression(expression, whole);
@@ -38,16 +44,18 @@ namespace Calculator.Controllers
                 if (output.Success == true)
                 {
                     this.SaveMathExpression(expression + "=" + output.Value);
+                    _logger.LogInformation($"Computed Result: {expression} = {output.Value}");
+
                     return output.Value.ToString();
                 }
                 else 
                 {
-                    SendError("Could not get result");
+                    _logger.LogError("Could not get result");
                 }    
             }
             else 
             {
-                SendError("Expression was nul or empty");   
+                _logger.LogError("Expression was nul or empty");   
             }
             
             return "error";
@@ -61,6 +69,9 @@ namespace Calculator.Controllers
         [Route("api/v1/math/getLatestExpressions")]
         public JsonResult GetExpressions()
         {
+            string method = MethodBase.GetCurrentMethod().ToString();
+            _logger.LogDebug($"Entered action: {method}");
+
             List<ExpressionViewModel> models = new List<ExpressionViewModel>();
 
             var expressions = this._database.Expressions.OrderByDescending(x => x.CreatedAt).Take(10).ToList();
@@ -69,12 +80,13 @@ namespace Calculator.Controllers
             {
                 expressions.ForEach(entity =>
                 {
+                    _logger.LogInformation("Expression history obtained from database");
                     models.Add(new ExpressionViewModel() { Expression = entity.Expression });
                 });
             }
             else 
             {
-                SendError("Failed to select expressions from database");
+                _logger.LogError("Failed to select expressions from database");
             }
             return new JsonResult(models);
         }
@@ -85,6 +97,10 @@ namespace Calculator.Controllers
         /// <param name="expression"></param>
         private void SaveMathExpression(string expression)
         {
+            string method = MethodBase.GetCurrentMethod().ToString();
+            _logger.LogDebug($"Entered action: {method}");
+            _logger.LogInformation($"Param expression: {expression}");
+
             if (!string.IsNullOrEmpty(expression))
             {
                 _database.Expressions.Add(new MathExpression()
@@ -94,11 +110,18 @@ namespace Calculator.Controllers
                     CreatedAt = DateTime.UtcNow
                 });
 
-                _database.SaveChanges();
+                if (_database.SaveChanges() == 1)
+                {
+                    _logger.LogInformation("Expression saved to history");
+                }
+                else 
+                {
+                    _logger.LogWarning("A problem occured during saving expression to database");
+                }
             }
             else 
             {
-                SendError("Received Expression was null");
+                _logger.LogError("Received Expression was null");
             }
         }
 
