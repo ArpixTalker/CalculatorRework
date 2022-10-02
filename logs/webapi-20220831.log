@@ -1,0 +1,276 @@
+2022-08-31 22:10:43.675 +02:00  INF  User profile is available. Using 'C:\Users\snipe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-31 22:10:44.017 +02:00  INF  Now listening on: https://localhost:7034
+2022-08-31 22:10:44.020 +02:00  INF  Now listening on: http://localhost:5034
+2022-08-31 22:10:44.034 +02:00  INF  Application started. Press Ctrl+C to shut down.
+2022-08-31 22:10:44.038 +02:00  INF  Hosting environment: Development
+2022-08-31 22:10:44.040 +02:00  INF  Content root path: D:\Repository\Astratex\New folder\CalculatorRework\Calculator\
+2022-08-31 22:10:44.360 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/ - -
+2022-08-31 22:10:44.420 +02:00  INF  Executing endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:10:44.452 +02:00  INF  Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Calculator.Controllers.HomeController (Calculator).
+2022-08-31 22:10:44.662 +02:00  INF  Executing ViewResult, running view Index.
+2022-08-31 22:10:44.863 +02:00  INF  Executed ViewResult - view Index executed in 200.3928ms.
+2022-08-31 22:10:44.870 +02:00  INF  Executed action Calculator.Controllers.HomeController.Index (Calculator) in 417.7531ms
+2022-08-31 22:10:44.870 +02:00  INF  Executed endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:10:44.921 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/ - - - 200 - text/html;+charset=utf-8 563.7722ms
+2022-08-31 22:10:44.923 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - -
+2022-08-31 22:10:44.923 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/js/index.js - -
+2022-08-31 22:10:44.937 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 14.3307ms
+2022-08-31 22:10:44.946 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_vs/browserLink - -
+2022-08-31 22:10:44.959 +02:00  INF  The file /js/index.js was not modified
+2022-08-31 22:10:44.959 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/js/index.js - - - 304 - application/javascript 36.7195ms
+2022-08-31 22:10:44.990 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.6973ms
+2022-08-31 22:10:45.042 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:10:45.044 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:10:45.045 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:10:45.639 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:10:47.150 +02:00  INF  Executed DbCommand (112ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:10:47.231 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:10:47.234 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 2188.3945ms
+2022-08-31 22:10:47.234 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:10:47.239 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 2196.7115ms
+2022-08-31 22:10:49.958 +02:00  INF  Request starting HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 26
+2022-08-31 22:10:49.959 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:10:49.969 +02:00  INF  Route matched with {action = "ComputeExpression", controller = "Api"}. Executing controller action with signature System.String ComputeExpression(System.String, Boolean) on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:10:50.007 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:10:50.126 +02:00  INF  Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Expressions] ([ExpressionID], [CreatedAt], [Expression])
+VALUES (@p0, @p1, @p2);
+2022-08-31 22:10:50.149 +02:00  INF  Executing ObjectResult, writing value of type 'System.String'.
+2022-08-31 22:10:50.150 +02:00  INF  Executed action Calculator.Controllers.ApiController.ComputeExpression (Calculator) in 181.079ms
+2022-08-31 22:10:50.150 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:10:50.150 +02:00  INF  Request finished HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 26 - 200 - text/plain;+charset=utf-8 191.9194ms
+2022-08-31 22:10:50.154 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:10:50.154 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:10:50.154 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:10:50.196 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:10:50.203 +02:00  INF  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:10:50.203 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:10:50.203 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 49.2096ms
+2022-08-31 22:10:50.203 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:10:50.204 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 49.7883ms
+2022-08-31 22:16:23.716 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/ - -
+2022-08-31 22:16:23.717 +02:00  INF  Executing endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:16:23.718 +02:00  INF  Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Calculator.Controllers.HomeController (Calculator).
+2022-08-31 22:16:23.718 +02:00  INF  Executing ViewResult, running view Index.
+2022-08-31 22:16:23.732 +02:00  INF  Executed ViewResult - view Index executed in 13.8852ms.
+2022-08-31 22:16:23.732 +02:00  INF  Executed action Calculator.Controllers.HomeController.Index (Calculator) in 14.213ms
+2022-08-31 22:16:23.732 +02:00  INF  Executed endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:16:23.734 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/ - - - 200 - text/html;+charset=utf-8 17.7080ms
+2022-08-31 22:16:23.747 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - -
+2022-08-31 22:16:23.748 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.2498ms
+2022-08-31 22:16:23.748 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/css/index.css - -
+2022-08-31 22:16:23.748 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/js/index.js - -
+2022-08-31 22:16:23.749 +02:00  INF  The file /css/index.css was not modified
+2022-08-31 22:16:23.749 +02:00  INF  The file /js/index.js was not modified
+2022-08-31 22:16:23.749 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/css/index.css - - - 304 - text/css 0.8005ms
+2022-08-31 22:16:23.749 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/js/index.js - - - 304 - application/javascript 0.7552ms
+2022-08-31 22:16:23.759 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_vs/browserLink - -
+2022-08-31 22:16:23.774 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.7957ms
+2022-08-31 22:16:23.853 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:16:23.853 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:16:23.854 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:16:23.857 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:16:23.864 +02:00  INF  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:16:23.864 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:16:23.865 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 10.6524ms
+2022-08-31 22:16:23.865 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:16:23.865 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 11.9223ms
+2022-08-31 22:16:31.268 +02:00  INF  User profile is available. Using 'C:\Users\snipe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-31 22:16:31.489 +02:00  INF  Now listening on: https://localhost:7034
+2022-08-31 22:16:31.491 +02:00  INF  Now listening on: http://localhost:5034
+2022-08-31 22:16:31.498 +02:00  INF  Application started. Press Ctrl+C to shut down.
+2022-08-31 22:16:31.500 +02:00  INF  Hosting environment: Development
+2022-08-31 22:16:31.502 +02:00  INF  Content root path: D:\Repository\Astratex\New folder\CalculatorRework\Calculator\
+2022-08-31 22:16:32.075 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/ - -
+2022-08-31 22:16:32.136 +02:00  INF  Executing endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:16:32.163 +02:00  INF  Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Calculator.Controllers.HomeController (Calculator).
+2022-08-31 22:16:32.342 +02:00  INF  Executing ViewResult, running view Index.
+2022-08-31 22:16:32.535 +02:00  INF  Executed ViewResult - view Index executed in 191.8799ms.
+2022-08-31 22:16:32.544 +02:00  INF  Executed action Calculator.Controllers.HomeController.Index (Calculator) in 380.2959ms
+2022-08-31 22:16:32.545 +02:00  INF  Executed endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:16:32.589 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/ - - - 200 - text/html;+charset=utf-8 520.1246ms
+2022-08-31 22:16:32.589 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - -
+2022-08-31 22:16:32.601 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 11.4678ms
+2022-08-31 22:16:32.609 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_vs/browserLink - -
+2022-08-31 22:16:32.651 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.2510ms
+2022-08-31 22:16:32.704 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:16:32.706 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:16:32.707 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:16:33.279 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:16:34.124 +02:00  INF  Executed DbCommand (55ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:16:34.207 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:16:34.209 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 1502.7615ms
+2022-08-31 22:16:34.210 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:16:34.215 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 1511.2039ms
+2022-08-31 22:17:05.684 +02:00  INF  Request starting HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 31
+2022-08-31 22:17:05.687 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:17:05.697 +02:00  INF  Route matched with {action = "ComputeExpression", controller = "Api"}. Executing controller action with signature System.String ComputeExpression(System.String, Boolean) on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:17:05.745 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:17:05.872 +02:00  INF  Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Expressions] ([ExpressionID], [CreatedAt], [Expression])
+VALUES (@p0, @p1, @p2);
+2022-08-31 22:17:05.896 +02:00  INF  Executing ObjectResult, writing value of type 'System.String'.
+2022-08-31 22:17:05.897 +02:00  INF  Executed action Calculator.Controllers.ApiController.ComputeExpression (Calculator) in 199.8269ms
+2022-08-31 22:17:05.897 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:17:05.897 +02:00  INF  Request finished HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 31 - 200 - text/plain;+charset=utf-8 213.6599ms
+2022-08-31 22:17:05.901 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:17:05.901 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:17:05.901 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:17:05.943 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:17:05.950 +02:00  INF  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:17:05.950 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:17:05.950 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 49.0159ms
+2022-08-31 22:17:05.950 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:17:05.950 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 49.3907ms
+2022-08-31 22:18:19.967 +02:00  INF  User profile is available. Using 'C:\Users\snipe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-31 22:18:20.203 +02:00  INF  Now listening on: https://localhost:7034
+2022-08-31 22:18:20.205 +02:00  INF  Now listening on: http://localhost:5034
+2022-08-31 22:18:20.212 +02:00  INF  Application started. Press Ctrl+C to shut down.
+2022-08-31 22:18:20.215 +02:00  INF  Hosting environment: Development
+2022-08-31 22:18:20.216 +02:00  INF  Content root path: D:\Repository\Astratex\New folder\CalculatorRework\Calculator\
+2022-08-31 22:18:20.910 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/ - -
+2022-08-31 22:18:20.968 +02:00  INF  Executing endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:18:20.998 +02:00  INF  Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Calculator.Controllers.HomeController (Calculator).
+2022-08-31 22:18:21.181 +02:00  INF  Executing ViewResult, running view Index.
+2022-08-31 22:18:21.372 +02:00  INF  Executed ViewResult - view Index executed in 188.5003ms.
+2022-08-31 22:18:21.380 +02:00  INF  Executed action Calculator.Controllers.HomeController.Index (Calculator) in 381.4224ms
+2022-08-31 22:18:21.380 +02:00  INF  Executed endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:18:21.433 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/ - - - 200 - text/html;+charset=utf-8 524.6716ms
+2022-08-31 22:18:21.434 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - -
+2022-08-31 22:18:21.434 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/js/index.js - -
+2022-08-31 22:18:21.449 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 14.7759ms
+2022-08-31 22:18:21.457 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_vs/browserLink - -
+2022-08-31 22:18:21.463 +02:00  INF  The file /js/index.js was not modified
+2022-08-31 22:18:21.465 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/js/index.js - - - 304 - application/javascript 30.6119ms
+2022-08-31 22:18:21.496 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.9131ms
+2022-08-31 22:18:21.574 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:18:21.576 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:18:21.578 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:18:22.141 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:18:22.966 +02:00  INF  Executed DbCommand (57ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:18:23.048 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:18:23.051 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 1472.7824ms
+2022-08-31 22:18:23.051 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:18:23.055 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 1481.5602ms
+2022-08-31 22:18:26.054 +02:00  INF  Request starting HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 26
+2022-08-31 22:18:26.056 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:18:26.069 +02:00  INF  Route matched with {action = "ComputeExpression", controller = "Api"}. Executing controller action with signature System.String ComputeExpression(System.String, Boolean) on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:18:26.108 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:18:26.236 +02:00  INF  Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Expressions] ([ExpressionID], [CreatedAt], [Expression])
+VALUES (@p0, @p1, @p2);
+2022-08-31 22:18:26.259 +02:00  INF  Executing ObjectResult, writing value of type 'System.String'.
+2022-08-31 22:18:26.259 +02:00  INF  Executed action Calculator.Controllers.ApiController.ComputeExpression (Calculator) in 190.6636ms
+2022-08-31 22:18:26.260 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:18:26.260 +02:00  INF  Request finished HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 26 - 200 - text/plain;+charset=utf-8 205.2139ms
+2022-08-31 22:18:26.264 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:18:26.264 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:18:26.264 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:18:26.309 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:18:26.409 +02:00  INF  Executed DbCommand (94ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:18:26.409 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:18:26.409 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 145.2805ms
+2022-08-31 22:18:26.409 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:18:26.409 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 145.9137ms
+2022-08-31 22:18:34.361 +02:00  INF  Request starting HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 27
+2022-08-31 22:18:34.361 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:18:34.361 +02:00  INF  Route matched with {action = "ComputeExpression", controller = "Api"}. Executing controller action with signature System.String ComputeExpression(System.String, Boolean) on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:18:34.365 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:18:34.369 +02:00  INF  Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Expressions] ([ExpressionID], [CreatedAt], [Expression])
+VALUES (@p0, @p1, @p2);
+2022-08-31 22:18:34.370 +02:00  INF  Executing ObjectResult, writing value of type 'System.String'.
+2022-08-31 22:18:34.370 +02:00  INF  Executed action Calculator.Controllers.ApiController.ComputeExpression (Calculator) in 8.7324ms
+2022-08-31 22:18:34.370 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.ComputeExpression (Calculator)'
+2022-08-31 22:18:34.370 +02:00  INF  Request finished HTTP/2 POST https://localhost:7034/api/v1/math/compute application/x-www-form-urlencoded;+charset=UTF-8 27 - 200 - text/plain;+charset=utf-8 9.2369ms
+2022-08-31 22:18:34.374 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:18:34.375 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:18:34.375 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:18:34.377 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:18:34.381 +02:00  INF  Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:18:34.382 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:18:34.382 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 7.047ms
+2022-08-31 22:18:34.382 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:18:34.382 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 7.6647ms
+2022-08-31 22:27:47.263 +02:00  INF  User profile is available. Using 'C:\Users\snipe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-31 22:27:47.963 +02:00  INF  Now listening on: https://localhost:7034
+2022-08-31 22:27:47.965 +02:00  INF  Now listening on: http://localhost:5034
+2022-08-31 22:27:47.973 +02:00  INF  Application started. Press Ctrl+C to shut down.
+2022-08-31 22:27:47.975 +02:00  INF  Hosting environment: Development
+2022-08-31 22:27:47.977 +02:00  INF  Content root path: D:\Repository\Astratex\New folder\CalculatorRework\Calculator\
+2022-08-31 22:27:49.427 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/ - -
+2022-08-31 22:27:49.489 +02:00  INF  Executing endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:27:50.215 +02:00  INF  Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Calculator.Controllers.HomeController (Calculator).
+2022-08-31 22:27:50.672 +02:00  INF  Executing ViewResult, running view Index.
+2022-08-31 22:27:50.880 +02:00  INF  Executed ViewResult - view Index executed in 253.181ms.
+2022-08-31 22:27:50.887 +02:00  INF  Executed action Calculator.Controllers.HomeController.Index (Calculator) in 671.9888ms
+2022-08-31 22:27:50.888 +02:00  INF  Executed endpoint 'Calculator.Controllers.HomeController.Index (Calculator)'
+2022-08-31 22:27:50.958 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2022-08-31 22:27:50.958 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-08-31 22:27:50.958 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/Calculator.styles.css?v=SRmgmlmIPqst5XESNrWbxiaE0gLD5LXzwmQEnoTfJk8 - -
+2022-08-31 22:27:50.960 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/ - - - 200 - text/html;+charset=utf-8 1536.3319ms
+2022-08-31 22:27:50.981 +02:00  INF  The file /Calculator.styles.css was not modified
+2022-08-31 22:27:50.981 +02:00  INF  The file /css/site.css was not modified
+2022-08-31 22:27:50.981 +02:00  INF  The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2022-08-31 22:27:50.982 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/Calculator.styles.css?v=SRmgmlmIPqst5XESNrWbxiaE0gLD5LXzwmQEnoTfJk8 - - - 304 - text/css 23.9363ms
+2022-08-31 22:27:50.982 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 24.0265ms
+2022-08-31 22:27:50.982 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 304 - text/css 23.9863ms
+2022-08-31 22:27:51.238 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/css/index.css - -
+2022-08-31 22:27:51.238 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-08-31 22:27:51.239 +02:00  INF  The file /css/index.css was not modified
+2022-08-31 22:27:51.239 +02:00  INF  The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2022-08-31 22:27:51.238 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/lib/jquery/dist/jquery.min.js - -
+2022-08-31 22:27:51.239 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 0.3164ms
+2022-08-31 22:27:51.239 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/css/index.css - - - 304 - text/css 0.3195ms
+2022-08-31 22:27:51.239 +02:00  INF  The file /lib/jquery/dist/jquery.min.js was not modified
+2022-08-31 22:27:51.239 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 0.5766ms
+2022-08-31 22:27:51.243 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2022-08-31 22:27:51.243 +02:00  INF  The file /js/site.js was not modified
+2022-08-31 22:27:51.243 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 0.3832ms
+2022-08-31 22:27:51.248 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/js/index.js - -
+2022-08-31 22:27:51.249 +02:00  INF  The file /js/index.js was not modified
+2022-08-31 22:27:51.249 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/js/index.js - - - 304 - application/javascript 0.3434ms
+2022-08-31 22:27:51.258 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - -
+2022-08-31 22:27:51.263 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.9592ms
+2022-08-31 22:27:51.267 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/_vs/browserLink - -
+2022-08-31 22:27:51.389 +02:00  INF  Request starting HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - -
+2022-08-31 22:27:51.391 +02:00  INF  Executing endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:27:51.392 +02:00  INF  Route matched with {action = "GetExpressions", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult GetExpressions() on controller Calculator.Controllers.ApiController (Calculator).
+2022-08-31 22:27:51.695 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 427.6270ms
+2022-08-31 22:27:52.479 +02:00  INF  Entity Framework Core 6.0.8 initialized 'CalculatorDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-08-31 22:27:58.052 +02:00  INF  Executed DbCommand (335ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [e].[ExpressionID], [e].[CreatedAt], [e].[Expression]
+FROM [Expressions] AS [e]
+ORDER BY [e].[CreatedAt] DESC
+2022-08-31 22:27:58.151 +02:00  INF  Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Calculator.Models.ExpressionViewModel, Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-31 22:27:58.154 +02:00  INF  Executed action Calculator.Controllers.ApiController.GetExpressions (Calculator) in 6762.3646ms
+2022-08-31 22:27:58.154 +02:00  INF  Executed endpoint 'Calculator.Controllers.ApiController.GetExpressions (Calculator)'
+2022-08-31 22:27:58.161 +02:00  INF  Request finished HTTP/2 GET https://localhost:7034/api/v1/math/getLatestExpressions - - - 200 - application/json;+charset=utf-8 6772.7550ms

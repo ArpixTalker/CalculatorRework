@@ -131,7 +131,7 @@ namespace Calculator.Controllers
         /// <param name="message"></param>
         private void SendError(string message) 
         {
-            
+            //void method    
         }
     }
 }
